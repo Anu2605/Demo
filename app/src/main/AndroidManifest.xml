@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.anuagarwal.demo" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data android:value="@string/facebook_app_id" android:name="com.facebook.sdk.ApplicationId"/>
+
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1580260555550232"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8a8c640ba7bb9f2a6b1be0e45449e154f9fa79aa" />
+    </application>
+
+</manifest>
